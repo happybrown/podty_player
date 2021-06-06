@@ -1,0 +1,23 @@
+{
+  "name": "podty",
+  "version": "1.0.0",
+  "description": "Podty Player",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "package": "electron-installer-debian --src podty-linux-x64/ --dest installers/ --arch amd64 --config config.json",
+    "build": "electron-packager . podty --overwrite --asar=true --platform=linux --arch=x64 --icon=app_ico.png --prune=true"
+  },
+  "keywords": [
+    "Electron",
+    "Podty"
+  ],
+  "author": "Brown",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "asar": "^3.0.3",
+    "electron": "^13.1.1",
+    "electron-installer-debian": "^3.1.0",
+    "electron-packager": "^15.2.0"
+  }
+}
